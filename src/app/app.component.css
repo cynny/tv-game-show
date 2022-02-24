@@ -112,7 +112,7 @@
   }
 
   .card.highlight-card {
-    background-color: #7dbb8f;
+    background-color: #f5ffc8;
     color: white;
     font-weight: 600;
     border: none;
@@ -122,7 +122,7 @@
   }
 
   .card.card.highlight-card span {
-    margin-left: 60px;
+    margin-left: 10px;
   }
 
 
