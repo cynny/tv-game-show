@@ -32,7 +32,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: #50b350;
     color: white;
     font-weight: 600;
   }
@@ -156,12 +156,12 @@
   a,
   a:visited,
   a:hover {
-    color: #1976d2;
+    color: #478b41;
     text-decoration: none;
   }
 
   a:hover {
-    color: #125699;
+    color: #12991d;
   }
 
   .terminal {
