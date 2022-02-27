@@ -1,0 +1,15 @@
+<div class="card-container">
+    <form>
+        <mat-form-field appearance="outline">
+            <mat-label>Find your next favorite show! </mat-label>
+            <mar-icon matPrefix></mar-icon>
+            <input matInput aria-label="Show Name" [formControl]
+            ="search">
+            <mat-hint>Enter Show Name
+            </mat-hint>
+            <mat-error *ngIf="search.invalid">
+             Type three or more characters to search
+            </mat-error>
+        </mat-form-field>
+    </form>
+</div>

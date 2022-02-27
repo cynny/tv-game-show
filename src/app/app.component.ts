@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IShowDetailsData } from './ishow-details-data';
+import { ShowDetailsService } from './show-details.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tv-game-show';
+  title = 'tv-show';
+  showDetails: IShowDetailsData ={
+    name: ''
+  }
+
+  constructor(private showDetailsService: ShowDetailsService) {}
+
+  doSearch(searchValue: string) {
+    this.showDetailsService.getShowDetails(searchValue)
+    .subscribe(data => this.showDetails = data);
+  }
+
 }
