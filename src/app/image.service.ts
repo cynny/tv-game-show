@@ -10,7 +10,7 @@ export class ImageService {
   constructor(private httpClient: HttpClient) { 
     getShowImage (id: number, url: string) {
       return this.httpClient.get
-      (`https://api.tvmaze.com/shows/:id/images?q=${showImage}&appId=${environment.appId}`)
+      (`https://api.tvmaze.com/shows/:id/images?q=${id}&appId=${environment.appId}`)
     }
     }
   }
