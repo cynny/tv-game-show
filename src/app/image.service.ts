@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 export class ImageService {
 
   constructor(private httpClient: HttpClient) { 
-    getShowImage (showImage: string) {
+    getShowImage (id: number, url: string) {
       return this.httpClient.get
       (`https://api.tvmaze.com/shows/:id/images?q=${showImage}&appId=${environment.appId}`)
     }
