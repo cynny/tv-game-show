@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Iimage } from '../iimage';
 
 @Component({
   selector: 'app-search-image',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchImageComponent implements OnInit {
 
+ 
   constructor() { }
 
   ngOnInit(): void {
