@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowImageComponent } from './show-image.component';
+import { SearchBoxComponent } from './search-box.component';
 
-describe('ShowImageComponent', () => {
-  let component: ShowImageComponent;
-  let fixture: ComponentFixture<ShowImageComponent>;
+describe('SearchBoxComponent', () => {
+  let component: SearchBoxComponent;
+  let fixture: ComponentFixture<SearchBoxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShowImageComponent ]
+      declarations: [ SearchBoxComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShowImageComponent);
+    fixture = TestBed.createComponent(SearchBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
