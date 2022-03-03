@@ -7,10 +7,12 @@ import { SearchBoxComponent } from './search-box/search-box.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { FullScheduleComponent } from './full-schedule/full-schedule.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    FullScheduleComponent
   ],
   imports: [
     BrowserModule,
