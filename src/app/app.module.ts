@@ -7,6 +7,7 @@ import { SearchBoxComponent } from './search-box/search-box.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 import { ShowEpisodesComponent } from './show-episodes/show-episodes.component';
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShowEpisodesComponent } from './show-episodes/show-episodes.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

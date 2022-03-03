@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscriber } from 'rxjs';
 import { IShowEpisodes } from '../ishow-episodes';
+import { ShowDetailsService } from '../show-details.service';
 
 @Component({
   selector: 'app-show-episodes',
@@ -9,14 +11,16 @@ import { IShowEpisodes } from '../ishow-episodes';
 export class ShowEpisodesComponent implements OnInit {
 
   episode: IShowEpisodes
-  constructor() { 
+  constructor(private showDetailsService: ShowDetailsService) { 
     this.episode = {
-      name: 'Pilot',
-      summary: 'In the premiere of this comedy about twentysomething women navigating their way through life in New York, Hannah swings and misses at two curves when her parents rescind their financial support and she loses her unpaid internship. Meanwhile, Hannahs roommate, Marnie, throws a dinner party for their nomadic friend Jessa, whos returned from yet another journey.'
+      name: '',
+      summary: ''
     }
   }
 
   ngOnInit(): void {
+    this.showDetailsService.getEpisodes('girls').
+    subscribe(data => this.episode = data)
   }
 
 }

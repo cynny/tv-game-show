@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'tv-show';
   showDetails: IShowDetailsData ={
     name: ''
-  }
+  }  
 
   constructor(private showDetailsService: ShowDetailsService) {}
 
