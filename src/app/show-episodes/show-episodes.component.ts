@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Subscriber } from 'rxjs';
 import { IShowEpisodes } from '../ishow-episodes';
-import { ShowDetailsService } from '../show-details.service';
+
 
 @Component({
   selector: 'app-show-episodes',
@@ -10,17 +10,15 @@ import { ShowDetailsService } from '../show-details.service';
 })
 export class ShowEpisodesComponent implements OnInit {
 
-  episode: IShowEpisodes
-  constructor(private showDetailsService: ShowDetailsService) { 
+  @Input() episode: IShowEpisodes
+  constructor() { 
     this.episode = {
       name: '',
       summary: ''
     }
   }
 
-  ngOnInit(): void {
-    this.showDetailsService.getEpisodes('girls').
-    subscribe(data => this.episode = data)
+  ngOnInit(): void {    
   }
 
 }
