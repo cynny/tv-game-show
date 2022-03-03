@@ -8,17 +8,9 @@ import { Iimage } from '../iimage';
 })
 export class SearchImageComponent implements OnInit {
 
- @Input() current : Iimage[] =[ {
-  
-  
-   image_original: '',
-
- }]
-
-
-  constructor() { }
-
+ @Input() 
   ngOnInit(): void {
   }
 
 }
+

@@ -1,9 +1,7 @@
 export interface IimageData {
-    id: number,
-     type: string,
-     main: string,
+   image: [{
+    
     url: string,
-    width: number,
-    height: number,
+    resolution: string
 
-}
+   }]}
