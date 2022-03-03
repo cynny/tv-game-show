@@ -13,6 +13,7 @@ export class ShowEpisodesComponent implements OnInit {
   @Input() episode: IShowEpisodes
   constructor() { 
     this.episode = {
+      img:'',
       name: '',
       summary: ''
     }

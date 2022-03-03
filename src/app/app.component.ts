@@ -14,6 +14,7 @@ export class AppComponent {
     name: ''
   } 
   episodeDetails: IShowEpisodes ={
+    img:'',
     name: '',
     summary: ''
   }

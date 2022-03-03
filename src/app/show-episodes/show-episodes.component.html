@@ -3,7 +3,10 @@
 </div>
 
 <div *ngIf="episode.name">
-    <div>Episode Name: {{episode.name}}</div> 
-    <div>Summary: {{episode.summary}}</div>   
-</div>
+    <h1>Episodes</h1>    
+    <h4>{{episode.name}}</h4>
+    <img [src]="episode.img"/>        
+    <p>{{episode.summary}}</p>
+</div>   
+
 

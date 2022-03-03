@@ -7,7 +7,7 @@ import { IShowEpisodesData } from './ishow-episodes-data';
 @Injectable({
   providedIn: 'root'
 })
-export class ShowDetailsService {
+export class ShowDetailsService {  
 
   constructor(private httpClient: HttpClient) {}
 
@@ -24,8 +24,9 @@ export class ShowDetailsService {
 
   private transformToIShowEpisode(data: IShowEpisodesData){
       return{
+        img: data._embedded.episodes[0].image.medium,
         name: data._embedded.episodes[0].name,
-        summary: data._embedded.episodes[0].summary
+        summary: data._embedded.episodes[0].summary.replace(/<[^>]*>/g, '')
       }
   }
 
