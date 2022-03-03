@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Iimage } from '../iimage';
+import { IimageData } from '../iimage-data';
 
 @Component({
   selector: 'app-search-image',
@@ -8,7 +9,18 @@ import { Iimage } from '../iimage';
 })
 export class SearchImageComponent implements OnInit {
 
- @Input() 
+ 
+ private _iimage!: IimageData;
+  public get image(): IimageData {
+    return this._iimage;
+  }
+  public set image(value: IimageData) {
+    this._iimage = value;
+  }
+ 
+
+
+
   ngOnInit(): void {
   }
 
