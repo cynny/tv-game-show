@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 import { IimageData } from './iimage-data';
-
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -14,6 +15,7 @@ export class ImageService {
   getIimage(resolutions: string, url: string) {
     return this.httpClient.get<IimageData>
     (`https://api.tvmaze.com/shows/:id/images${resolutions}:${url}`)
+    .pipe(Map(data => this.transformToIimage(data)))
 
   }
 
