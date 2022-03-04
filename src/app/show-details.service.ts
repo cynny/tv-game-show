@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { IShowDetailsData } from './ishow-details-data';
 import { map } from 'rxjs';
+import { IShowDetailsDataS } from './ishow-details-data-s';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +11,12 @@ export class ShowDetailsService {
   constructor(private httpClient: HttpClient) {}
 
   getShowDetails(showName: string) {
-    return this.httpClient.get<IShowDetailsData>
+    return this.httpClient.get<IShowDetailsDataS>
     (`https://api.tvmaze.com/singlesearch/shows?q=${showName}`)
-    .pipe(map(data=>this.transformToIShowDetails(data)))    
+    .pipe(map(data=>this.transformToIShowDetailsS(data)))    
   }  
 
-  private transformToIShowDetails(data: IShowDetailsData){
+  private transformToIShowDetailsS(data: IShowDetailsDataS){
     return {
       name:data.name,      
       language:data.language,

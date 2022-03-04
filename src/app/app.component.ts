@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IShowDetails } from './ishow-details';
-import { IShowDetailsData } from './ishow-details-data';
+import { IShowDetailsS } from './ishow-details-s';
 import { ShowDetailsService } from './show-details.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ShowDetailsService } from './show-details.service';
 })
 export class AppComponent {
   title = 'tv-show';
-   showDetailsS: IShowDetails ={
+   showDetailsS: IShowDetailsS ={
     name:'',
     language:'',
     runtime:0,
