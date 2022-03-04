@@ -10,6 +10,7 @@ import { ShowDetailsService } from './show-details.service';
 })
 export class AppComponent {
   title = 'tv-show';
+
    showDetailsS: IShowDetailsS ={
     name:'',
     language:'',
@@ -18,6 +19,12 @@ export class AppComponent {
     image:'',
     summary:''  
    }
+
+  showDetails: IShowDetailsData ={
+    name: '',
+    episodes: []
+  }
+
 
   constructor(private showDetailsService: ShowDetailsService) {}  
 
