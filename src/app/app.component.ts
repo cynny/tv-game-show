@@ -21,9 +21,8 @@ export class AppComponent {
 
   constructor(private showDetailsService: ShowDetailsService) {}  
 
-   doSearch(searchValue: string) {
-     this.showDetailsService.getShowDetails(searchValue)
+   doSearch(searchValue: string) {   
+     this.showDetailsService.getShowDetailsS(searchValue)
      .subscribe(data => this.showDetailsS = data);
   }
-
 }
