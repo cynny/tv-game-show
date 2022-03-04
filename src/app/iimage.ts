@@ -1,8 +1,7 @@
 export interface Iimage {
    
-    image: string,
+    resolutions: string,
     url: string,
-    showname: string,
-    showdetails: string,
-    id: Number,
+
+  
 }

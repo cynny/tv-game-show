@@ -9,19 +9,23 @@ import { IimageData } from '../iimage-data';
 })
 export class SearchImageComponent implements OnInit {
 
- 
- private _iimage!: IimageData;
-  public get image(): IimageData {
-    return this._iimage;
-  }
-  public set image(value: IimageData) {
-    this._iimage = value;
-  }
+ current: Iimage
+ constructor (private ImageService: IimageData) {
+   this.current = {
+
+     url: '',
+     resolutions: ''
+
+   }
+ }
+  
  
 
 
 
   ngOnInit(): void {
+    this.ImageService.getimage('original', 'https://static.tvmaze.com/uploads/images/original_untouched/0/1.jpg').
+    subscribe(data => this.current = data)
   }
 
 }
