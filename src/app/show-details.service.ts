@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { map } from 'rxjs';
 import { IShowDetailsDataS } from './ishow-details-data-s';
-
-import {map} from 'rxjs/operators';
 import { IApiResponseData } from './iapi-response-data';
 
 
@@ -30,6 +28,7 @@ export class ShowDetailsService {
       image:data.image.medium,
       summary:data.summary.replace(/<[^>]*>/g, '')
     } 
+  }
 
   getShowDetails(showName: string) {
     return this.httpClient.get<IApiResponseData>

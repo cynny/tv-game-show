@@ -14,7 +14,7 @@ import { ShowEpisodesComponent } from './show-episodes/show-episodes.component';
   declarations: [
     AppComponent,
     SearchBoxComponent,
-    CurrentShowComponent
+    CurrentShowComponent,
     ShowEpisodesComponent
 
   ],

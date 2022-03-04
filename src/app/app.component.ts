@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IShowDetails } from './ishow-details';
+import { IShowDetailsData } from './ishow-details-data';
 import { IShowDetailsS } from './ishow-details-s';
 import { ShowDetailsService } from './show-details.service';
 
@@ -29,6 +30,8 @@ export class AppComponent {
   constructor(private showDetailsService: ShowDetailsService) {}  
 
    doSearch(searchValue: string) {   
+    this.showDetailsService.getShowDetails(searchValue)
+    .subscribe(data => this.showDetails = data);
      this.showDetailsService.getShowDetailsS(searchValue)
      .subscribe(data => this.showDetailsS = data);
   }
