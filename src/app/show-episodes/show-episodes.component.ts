@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Subscriber } from 'rxjs';
-import { IShowEpisodes } from '../ishow-episodes';
-
+import { IShowDetailsData } from '../ishow-details-data';
 
 @Component({
   selector: 'app-show-episodes',
@@ -10,12 +9,11 @@ import { IShowEpisodes } from '../ishow-episodes';
 })
 export class ShowEpisodesComponent implements OnInit {
 
-  @Input() episode: IShowEpisodes
-  constructor() { 
-    this.episode = {
-      img:'',
+  @Input() current: IShowDetailsData
+  constructor() {
+    this.current = {
       name: '',
-      summary: ''
+      episodes: []
     }
   }
 

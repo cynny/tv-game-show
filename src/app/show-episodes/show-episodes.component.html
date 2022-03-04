@@ -1,12 +1,14 @@
-<div *ngIf="!episode.name">
+<div *ngIf="current.episodes.length == 0">
     No data available
 </div>
 
-<div *ngIf="episode.name">
-    <h1>Episodes</h1>    
-    <h4>{{episode.name}}</h4>
-    <img [src]="episode.img"/>        
-    <p>{{episode.summary}}</p>
-</div>   
+<div *ngIf="current.episodes.length > 0">
+    <h1>Episodes</h1>
+    <div *ngFor="let episode of current.episodes">
+        <h4>{{episode.name}}</h4>
+        <img [src]="episode.img"/>
+        <p>{{episode.summary}}</p>
+    </div>
+</div>
 
 
