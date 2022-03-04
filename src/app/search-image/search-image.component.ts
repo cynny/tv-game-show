@@ -14,9 +14,9 @@ export class SearchImageComponent implements OnInit {
    this.current = {
 
      url: '',
-     resolutions: ''
-     width: ''
-     height: ''
+     resolutions: '',
+     width: '',
+     height: '',
      type: ''
 
    }
