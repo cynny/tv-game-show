@@ -7,10 +7,16 @@ import { SearchBoxComponent } from './search-box/search-box.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { FullScheduleComponent } from './full-schedule/full-schedule.component';
+import{MatButtonModule} from '@angular/material/button'
+import{MatIconModule} from '@angular/material/icon'
+import{MatToolbarModule} from '@angular/material/toolbar'
+import{MatCardModule} from '@angular/material/card'
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    FullScheduleComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +25,11 @@ import { MatInputModule } from '@angular/material/input';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
