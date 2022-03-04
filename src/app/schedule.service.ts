@@ -21,7 +21,8 @@ export class ScheduleService {
       season: data.season,
       date: new Date(data.airdate),
       time: data.airstamp,
-      Image: `https://static.tvmaze.com/uploads/images/${data.image.medium}.jpg`
+      image:`https://static.tvmaze.com/uploads/images/original_untouched/${data.image.original}.jpg`
+
     }
   }
 }

@@ -4,6 +4,6 @@ export interface IFullScheduleData {
     airdate: string,
     airstamp: string,
     image: {
-        medium: string
+        original: string
     }
 }

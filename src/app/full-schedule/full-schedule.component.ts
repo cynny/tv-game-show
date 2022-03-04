@@ -23,7 +23,7 @@ export class FullScheduleComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.scheduleService.getCurrentTvShow('All American', 4).subscribe(data => this.schedule)
+    //this.scheduleService.getCurrentTvShow('All American', 4).subscribe(data => this.schedule)
   }
 
 }
