@@ -1,8 +1,11 @@
-<div>
-    <div>{{current.name}}</div>
-    <div>{{current.language}}</div>
-    <div>{{current.runtime}}</div>
-    <div>{{current.rating}}</div>
+<div *ngIf="!current.image">
+    No data available
+</div>
+<div *ngIf="current.image">
+    <h2>{{current.name}}</h2>
     <img [src]='current.image'/>
-    <div>{{current.summary}}</div>    
+    <div>Language: {{current.language}}</div>
+    <div>Runtime: {{current.runtime}}</div>
+    <div>Rating: {{current.rating}}</div>    
+    <div>Summary: {{current.summary}}</div>    
 </div>

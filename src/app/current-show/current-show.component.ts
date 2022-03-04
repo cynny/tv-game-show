@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IShowDetails } from '../ishow-details';
 
 @Component({
@@ -8,20 +8,20 @@ import { IShowDetails } from '../ishow-details';
 })
 export class CurrentShowComponent implements OnInit {
 
-  current: IShowDetails
+  @Input() current: IShowDetails
 
   constructor() { 
     this.current={
-      name:'girls',
-      language:'English',
-      runtime:30,
-      rating:5,
+      name:'',
+      language:'',
+      runtime:0,
+      rating:0,
       image:'',
-      summary:'girls summary'      
+      summary:''      
     }
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
 
 }
