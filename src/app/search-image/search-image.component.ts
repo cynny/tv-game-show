@@ -15,6 +15,9 @@ export class SearchImageComponent implements OnInit {
 
      url: '',
      resolutions: ''
+     width: ''
+     height: ''
+     type: ''
 
    }
  }
@@ -25,7 +28,7 @@ export class SearchImageComponent implements OnInit {
 
   ngOnInit(): void {
     this.ImageService.getimage('original', 'https://static.tvmaze.com/uploads/images/original_untouched/0/1.jpg').
-    subscribe(data => this.current = data)
+    subscribe(data => this.current = Image)
   }
 
 }
