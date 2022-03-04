@@ -8,11 +8,15 @@ import { CurrentShowComponent } from './current-show/current-show.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { ShowEpisodesComponent } from './show-episodes/show-episodes.component';
 @NgModule({
   declarations: [
     AppComponent,
     SearchBoxComponent,
-    CurrentShowComponent
+    CurrentShowComponent,
+    ShowEpisodesComponent
+
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,8 @@ import { MatInputModule } from '@angular/material/input';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
