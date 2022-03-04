@@ -8,10 +8,10 @@ import { IShowDetails } from '../ishow-details';
 })
 export class CurrentShowComponent implements OnInit {
 
-  @Input() current: IShowDetails
+  @Input() currentS: IShowDetails
 
   constructor() { 
-    this.current={
+    this.currentS={
       name:'',
       language:'',
       runtime:0,

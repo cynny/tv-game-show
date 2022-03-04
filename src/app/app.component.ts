@@ -10,7 +10,7 @@ import { ShowDetailsService } from './show-details.service';
 })
 export class AppComponent {
   title = 'tv-show';
-   showDetails: IShowDetails ={
+   showDetailsS: IShowDetails ={
     name:'',
     language:'',
     runtime:0,
@@ -23,7 +23,7 @@ export class AppComponent {
 
    doSearch(searchValue: string) {
      this.showDetailsService.getShowDetails(searchValue)
-     .subscribe(data => this.showDetails = data);
+     .subscribe(data => this.showDetailsS = data);
   }
 
 }
