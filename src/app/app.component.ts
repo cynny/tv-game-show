@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IShowDetailsData } from './ishow-details-data';
-import { IShowEpisodes } from './ishow-episodes';
 import { ShowDetailsService } from './show-details.service';
 
 @Component({
@@ -11,12 +10,8 @@ import { ShowDetailsService } from './show-details.service';
 export class AppComponent {
   title = 'tv-show';
   showDetails: IShowDetailsData ={
-    name: ''
-  } 
-  episodeDetails: IShowEpisodes ={
-    img:'',
     name: '',
-    summary: ''
+    episodes: []
   }
 
   constructor(private showDetailsService: ShowDetailsService) {}
@@ -24,8 +19,6 @@ export class AppComponent {
   doSearch(searchValue: string) {
     this.showDetailsService.getShowDetails(searchValue)
     .subscribe(data => this.showDetails = data);
-    this.showDetailsService.getEpisodes(searchValue)
-    .subscribe(data => this.episodeDetails = data);
   }
 
 }
