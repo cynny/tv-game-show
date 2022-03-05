@@ -1,11 +1,11 @@
-<div *ngIf="!currentS.image">
+<div *ngIf="!currentShow.image">
     No data available
 </div>
-<div *ngIf="currentS.image">
-    <h2>{{currentS.name}}</h2>
-    <img [src]='currentS.image'/>
-    <div>Language: {{currentS.language}}</div>
-    <div>Runtime: {{currentS.runtime}}</div>
-    <div>Rating: {{currentS.rating}}</div>    
-    <div>Summary: {{currentS.summary}}</div>    
+<div *ngIf="currentShow.image">
+    <h2>{{currentShow.name}}</h2>
+    <img [src]='currentShow.image'/>
+    <div>Language: {{currentShow.language}}</div>
+    <div>Runtime: {{currentShow.runtime}}</div>
+    <div>Rating: {{currentShow.rating}}</div>    
+    <div>Summary: {{currentShow.summary}}</div>    
 </div>
