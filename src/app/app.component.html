@@ -15,7 +15,7 @@
   <div class="spacer"></div>
   
 
-  <div class="content-first">
+  <div class="content-first" *ngIf="currentShowDetails.image">
     <app-current-show [currentShow]="currentShowDetails"></app-current-show>
 </div>
 
@@ -23,7 +23,7 @@
 <div class="spacer"></div>
 
 
-<div class="content-second">
+<div class="content-second" *ngIf="episodeDetails.episodes.length > 0">
   <app-show-episodes [episodeDetails]="episodeDetails"></app-show-episodes>
 </div>
   

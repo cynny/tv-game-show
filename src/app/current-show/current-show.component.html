@@ -1,6 +1,3 @@
-<div *ngIf="!currentShow.image">
-    No data available
-</div>
 <div *ngIf="currentShow.image">
     <h2>{{currentShow.name}}</h2>
     <img [src]='currentShow.image'/>
