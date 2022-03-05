@@ -11,8 +11,7 @@ export class ShowEpisodesComponent implements OnInit {
 
   @Input() episodeDetails: IEpisode
   constructor() {
-    this.episodeDetails = {
-      name: '',
+    this.episodeDetails = {      
       episodes: []
     }
   }

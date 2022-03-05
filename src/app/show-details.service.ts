@@ -47,7 +47,6 @@ export class ShowDetailsService {
       })
     })
     return {
-      name: data.name,
       episodes: showEpisodes
     }
   }

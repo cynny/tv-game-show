@@ -1,6 +1,5 @@
 
-export interface IEpisode {
-    name: string
+export interface IEpisode {    
     episodes: Array<{
         img: string,
         name: string,

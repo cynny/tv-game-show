@@ -20,8 +20,7 @@ export class AppComponent {
     summary:''  
    }
 
-  episodeDetails: IEpisode ={
-    name: '',
+  episodeDetails: IEpisode ={    
     episodes: []
   }
 

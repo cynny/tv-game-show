@@ -1,5 +1,4 @@
-export interface IEpisodeData {
-    name: string
+export interface IEpisodeData {    
     _embedded: {
         episodes: [{
             image: {
