@@ -3,17 +3,27 @@
 <img alt="TV Bliss" src="/assets/TV_Bliss_Logo.jpg">
 </div>
   
-<div class="card-container">
-  <app-search-box (searchEvent)="doSearch($event)"></app-search-box>
-</div>
+<div class="content-overall">
+  
+  <div class="card-container">
+    <div class="content-search">
+    <app-search-box (searchEvent)="doSearch($event)"></app-search-box>
+  </div>
+  </div>
+  
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  
 
-<div class="spacer"></div>
-
-<div class="card-container">
+  <div class="content-first">
     <app-current-show [currentShow]="currentShowDetails"></app-current-show>
 </div>
 
-<div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+
+<div class="content-second">
   <app-show-episodes [episodeDetails]="episodeDetails"></app-show-episodes>
 </div>
   
