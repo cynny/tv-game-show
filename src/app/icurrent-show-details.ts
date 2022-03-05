@@ -1,4 +1,4 @@
-export interface IShowDetailsS {
+export interface ICurrentShowDetails {
     name:string
     language:string
     runtime:number

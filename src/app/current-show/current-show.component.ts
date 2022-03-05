@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IShowDetailsS } from '../ishow-details-s';
+import { ICurrentShowDetails } from '../icurrent-show-details';
 
 @Component({
   selector: 'app-current-show',
@@ -8,10 +8,10 @@ import { IShowDetailsS } from '../ishow-details-s';
 })
 export class CurrentShowComponent implements OnInit {
 
-  @Input() currentS: IShowDetailsS
+  @Input() currentShow: ICurrentShowDetails
 
   constructor() { 
-    this.currentS={
+    this.currentShow={
       name:'',
       language:'',
       runtime:0,

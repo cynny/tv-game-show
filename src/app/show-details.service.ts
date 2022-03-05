@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { map } from 'rxjs';
-import { IShowDetailsDataS } from './ishow-details-data-s';
-import { IApiResponseData } from './iapi-response-data';
+import { ICurrentShowDetailsData } from './icurrent-show-details-data';
+import { IEpisodeData } from './iepisode-data';
 
 
 @Injectable({
@@ -13,13 +13,13 @@ export class ShowDetailsService {
   constructor(private httpClient: HttpClient) {}
 
 
-  getShowDetailsS(showName: string) {
-    return this.httpClient.get<IShowDetailsDataS>
+  getCurrentShowDetails(showName: string) {
+    return this.httpClient.get<ICurrentShowDetailsData>
     (`https://api.tvmaze.com/singlesearch/shows?q=${showName}`)
-    .pipe(map(data=>this.transformToIShowDetailsS(data)))    
+    .pipe(map(data=>this.transformToICurrentShowDetails(data)))    
   }  
 
-  private transformToIShowDetailsS(data: IShowDetailsDataS){
+  private transformToICurrentShowDetails(data: ICurrentShowDetailsData){
     return {
       name:data.name,      
       language:data.language,
@@ -30,14 +30,14 @@ export class ShowDetailsService {
     } 
   }
 
-  getShowDetails(showName: string) {
-    return this.httpClient.get<IApiResponseData>
+  getEpisodeDetails(showName: string) {
+    return this.httpClient.get<IEpisodeData>
     (`https://api.tvmaze.com/singlesearch/shows?q=${showName}&embed=episodes`)
-    .pipe(map(data => this.transformToIShowDetails(data)))
+    .pipe(map(data => this.transformToIEpisode(data)))
 
   }
   
-  private transformToIShowDetails(data: IApiResponseData){
+  private transformToIEpisode(data: IEpisodeData){
     let showEpisodes: { img: string; name: string; summary: string; }[] = [];
     data._embedded.episodes.forEach(element => {
       showEpisodes.push({

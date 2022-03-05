@@ -1,8 +1,5 @@
 
-export interface IShowDetailsData {    
-} 
-
-export interface IShowDetailsData {
+export interface IEpisode {
     name: string
     episodes: Array<{
         img: string,

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Subscriber } from 'rxjs';
-import { IShowDetailsData } from '../ishow-details-data';
+import { IEpisode } from '../iepisode';
 
 @Component({
   selector: 'app-show-episodes',
@@ -9,9 +9,9 @@ import { IShowDetailsData } from '../ishow-details-data';
 })
 export class ShowEpisodesComponent implements OnInit {
 
-  @Input() current: IShowDetailsData
+  @Input() episodeDetails: IEpisode
   constructor() {
-    this.current = {
+    this.episodeDetails = {
       name: '',
       episodes: []
     }

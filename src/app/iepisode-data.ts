@@ -1,4 +1,4 @@
-export interface IApiResponseData {
+export interface IEpisodeData {
     name: string
     _embedded: {
         episodes: [{
