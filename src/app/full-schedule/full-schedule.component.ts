@@ -10,13 +10,13 @@ import { IFullSchedule } from '../ifull-schedule';
 export class FullScheduleComponent implements OnInit {
 
   @Input() currentN: IFullSchedule
-  constructor(private fullSchedule:FullScheduleService) { 
+  constructor( fullSchedule:FullScheduleService) { 
     this.currentN ={
       name: '',
      time: '',
-     days:Array<string>
+     days:[]
 
-    ()}
+    }
   }
 
   ngOnInit(): void {

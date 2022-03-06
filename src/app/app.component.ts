@@ -42,9 +42,9 @@ export class AppComponent {
     .subscribe(data => this.showDetails = data);
      this.showDetailsService.getShowDetailsS(searchValue)
      .subscribe(data => this.showDetailsS = data);
-     }
-     dSearch(sValue: string){
-       this.fullScheduleService.getFullSchedule(sValue).subscribe(data => this.fullSchedule = data);
+    
+     
+       this.fullScheduleService.getFullSchedule(searchValue).subscribe(data => this.fullSchedule = data);
 
      }
 
