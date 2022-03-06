@@ -16,6 +16,7 @@ export class ShowDetailsService {
   getShowDetailsS(showName: string) {
     return this.httpClient.get<IShowDetailsDataS>
     (`https://api.tvmaze.com/singlesearch/shows?q=${showName}`)
+    
     .pipe(map(data=>this.transformToIShowDetailsS(data)))    
   }  
 

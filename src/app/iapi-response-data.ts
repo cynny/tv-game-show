@@ -1,4 +1,5 @@
 export interface IApiResponseData {
+    schedule: any;
     name: string
     _embedded: {
         episodes: [{

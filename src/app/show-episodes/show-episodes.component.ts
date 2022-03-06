@@ -17,7 +17,8 @@ export class ShowEpisodesComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {  
+      
   }
 
 }

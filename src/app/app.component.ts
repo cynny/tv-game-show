@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { FullScheduleService } from './full-schedule.service';
+import { IFullSchedule } from './ifull-schedule';
 import { IShowDetails } from './ishow-details';
 import { IShowDetailsData } from './ishow-details-data';
 import { IShowDetailsS } from './ishow-details-s';
 import { ShowDetailsService } from './show-details.service';
+
 
 @Component({
   selector: 'app-root',
@@ -26,13 +29,36 @@ export class AppComponent {
     episodes: []
   }
 
+  fullSchedule: IFullSchedule={
+     name: '',
+     time: '',
+     days:[]
+   }
 
-  constructor(private showDetailsService: ShowDetailsService) {}  
+  constructor(private showDetailsService: ShowDetailsService, private fullScheduleService: FullScheduleService ) {}  
 
-   doSearch(searchValue: string) {   
+   doSearch(searchValue: string ) {   
     this.showDetailsService.getShowDetails(searchValue)
     .subscribe(data => this.showDetails = data);
      this.showDetailsService.getShowDetailsS(searchValue)
      .subscribe(data => this.showDetailsS = data);
+     }
+     dSearch(sValue: string){
+       this.fullScheduleService.getFullSchedule(sValue).subscribe(data => this.fullSchedule = data);
+
+     }
+
+
+   
   }
-}
+
+  
+
+
+  
+
+
+
+
+
+
