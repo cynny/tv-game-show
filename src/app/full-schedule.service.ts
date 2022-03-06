@@ -25,15 +25,15 @@ export class FullScheduleService {
    }
   }
 
-private trasformToIFullSchedule(data:IApiResponseData){
-  let fullSchedule: {name: string; time: string; days: [];}[] = [];
-  data.schedule.forEach((element: { name: any; schedule: { time: any; days: any; }; }) =>{
-    fullSchedule.push({
-name: element.name,
-time: element.schedule.time,
-days: element.schedule.days 
-   })
-  })
+// private trasformToIFullSchedule(data:IApiResponseData){
+//   let fullSchedule: {name: string; time: string; days:Array<string>;}[] = [];
+//   data.schedule.forEach((element: { name: string; schedule: { time: string; days: Array<string>; }; }) =>{
+//     fullSchedule.push({
+// name: element.name,
+// time: element.schedule.time,
+// days: element.schedule.days 
+//    })
+//   })
 
-}
+// }
 }

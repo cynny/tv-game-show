@@ -2,6 +2,6 @@ export interface IFullScheduleData {
     name: string,
     schedule:  {
         time: string,
-        days: []
+        days: Array<string>
     }
 }

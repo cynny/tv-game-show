@@ -14,9 +14,9 @@ export class FullScheduleComponent implements OnInit {
     this.currentN ={
       name: '',
      time: '',
-     days: []
+     days:Array<string>
 
-    }
+    ()}
   }
 
   ngOnInit(): void {
