@@ -17,10 +17,13 @@
 
   <div class="content-first" *ngIf="currentShowDetails.image">
     <app-current-show [currentShow]="currentShowDetails"></app-current-show>
+   
+    <div><app-full-schedule [currentN]= "fullSchedule"></app-full-schedule></div>
 </div>
 
 <div class="spacer"></div>
 <div class="spacer"></div>
+
 
 
 <div class="content-second" *ngIf="episodeDetails.episodes.length > 0">
